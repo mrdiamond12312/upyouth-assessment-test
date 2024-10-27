@@ -1,20 +1,5 @@
-# ViteJS TypeScript BoilerPlate
-
-## Packages:
-
-| Framework                        | Description                                          |
-| -------------------------------- | ---------------------------------------------------- |
-| Material UI                      | Google basic Components                              |
-| redux-toolkit                    | Global state Management                              |
-| redux-persist                    | Persist in local storage if needed                   |
-| react-helmet                     | Help with SEO and head title                         |
-| react-router-dom                 | Help with Navigation                                 |
-| react-google-recaptcha (v2 & v3) | Google ReCaptcha Implementatioon                     |
-| classNames                       | className state management, compatible with tailwind |
-| urlcat                           | conventional for API Path/URL replacement            |
-| tailwind & less                  | tailwind and less with preprocessor config           |
-| eslint                           | tracking code and convention                         |
-| husky & commitlint               | linting towards git commit messages                  |
+# UpYouth Assessment Test
+This repo replicate the homepage of [UpYouth](https://www.upyouth.org/)
 
 ## How to run:
 
