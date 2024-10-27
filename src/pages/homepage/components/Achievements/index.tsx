@@ -17,7 +17,7 @@ const Statistic: React.FC<IAchievement> = ({ statistic, category, isCurrentStati
   );
 
   const dropLightClassname = classNames(
-    'absolute top-[145px] h-[106px] w-[106px] transform rounded-full bg-white blur-lg backdrop-blur-[64px] transition-all duration-700 ease-in-out',
+    'absolute top-[145px] h-[106px] w-[106px] transform rounded-full bg-white blur-lg backdrop-blur-[64px] transition-all duration-700 ease-in-out hidden lg:block',
     {
       'opacity-0': !isCurrentStatistic,
     },

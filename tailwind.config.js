@@ -5,12 +5,19 @@ export default {
     './src/components/**/*.tsx',
     './src/layouts/**/*.tsx',
     './index.html',
-    './src/loading.tsx'
+    './src/loading.tsx',
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['ui-sans-serif','system-ui,sans-serif','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'],
+        sans: [
+          'ui-sans-serif',
+          'system-ui,sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
+        ],
         serif: ['ui-serif'],
       },
       keyframes: {

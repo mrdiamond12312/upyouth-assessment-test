@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import { AnimationProps, motion } from 'framer-motion';
-import React from 'react';
+import { AnimationProps, motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
 
-import { FLUSH_CONTAINER_VARIANT, FLUSH_POINTER_VARIANT } from './helpers/variants';
+import { FLUSH_POINTER_VARIANT } from './helpers/variants';
 
 export interface IFlushRevealProps extends AnimationProps {
   rootClassName?: string;
@@ -17,9 +17,7 @@ export interface IFlushRevealProps extends AnimationProps {
 const FlushReveal: React.FC<IFlushRevealProps> = ({
   children,
   rootClassName,
-  contentClassName,
   pointerClassName,
-  index,
   keyId,
 }) => {
   const rootClassNames = classNames('w-fit relative overflow-hidden', rootClassName);
@@ -27,14 +25,18 @@ const FlushReveal: React.FC<IFlushRevealProps> = ({
     'absolute w-full h-full bg-neutral-1 z-10 top-0 left-0',
     pointerClassName,
   );
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <motion.div className={rootClassNames} key={keyId}>
-        {children}
+    <motion.div ref={ref} className={rootClassNames} key={keyId}>
+      {children}
       <motion.div
         className={pointerClassNames}
-        custom={index}
-        initial="visible"
-        animate="hidden"
+        custom={isInView}
+        initial="hidden"
+        animate="visible"
         exit="exit"
         variants={FLUSH_POINTER_VARIANT}
       />
