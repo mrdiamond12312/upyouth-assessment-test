@@ -1,5 +1,7 @@
-import { Col, Flex, Row } from 'antd/lib';
+import { Col, Row } from 'antd/lib';
 import React from 'react';
+
+import Section from '@/components/Section';
 
 const Pros = () => {
   const pros = [
@@ -25,15 +27,12 @@ const Pros = () => {
     },
   ];
   return (
-    <section className="md:mx-8 p-8 md:p-16 mb-8 bg-blue-700 rounded-3xl mx-4 flex flex-col text-neutral-1 gap-4 md:gap-8 items-center relative overflow-clip my-8 lg: my-16">
-      <Flex className="flex-col items-center justify-center gap-2 md:gap-4 max-w-7xl mx-auto text-center">
-        <span className="text-2xl md:text-heading-4 font-bold !leading-loose">
-          What makes us different?
-        </span>
-        <p className="text-body-3-regular md:text-body-2-regular">
-          We strive to become a go-to startup community by youth, for youth.
-        </p>
-      </Flex>
+    <section className="md:mx-8 p-8 md:p-16 mb-8 bg-blue-700 rounded-3xl mx-4 flex flex-col text-neutral-1 gap-4 md:gap-8 items-center relative overflow-clip my-8 lg:my-16">
+      <Section
+        header="What makes us different?"
+        description="We strive to become a go-to startup community by youth, for youth."
+        neutral
+      />
       <Row
         gutter={{ xs: 16, md: 16, lg: 32 }}
         className="max-w-7xl mx-auto gap-y-4 lg:gap-y-8 px-4"

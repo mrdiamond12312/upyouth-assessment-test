@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import Section from '@/components/Section';
 
-const Partners = () => {
+const Partners: React.FC = () => {
   return (
     <Fragment>
       <Section

@@ -2,6 +2,8 @@ import { Flex } from 'antd/lib';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 
+import Section from '@/components/Section';
+
 interface IAchievement {
   statistic: string;
   category: string;
@@ -62,14 +64,11 @@ const Achievements = () => {
 
   return (
     <section className="md:mx-8 pt-8 mb-8 bg-blue-700 rounded-3xl mx-4 flex flex-col text-neutral-1 gap-4 md:gap-8">
-      <Flex className="flex-col items-center justify-center gap-2 md:gap-4 max-w-7xl mx-auto text-center">
-        <span className="text-2xl md:text-heading-4 font-bold !leading-loose">
-          Our numbers speak
-        </span>
-        <p className="text-body-3-regular md:text-body-2-regular">
-          UpYouth empowers can-do youth to create real impacts, and we also do the same.
-        </p>
-      </Flex>
+      <Section
+        header="Our numbers speak"
+        description="UpYouth empowers can-do youth to create real impacts, and we also do the same."
+        neutral
+      />
       <Flex className="mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl md:max-w-md max-w-xs flex flex-col items-center justify-between gap-8 overflow-hidden rounded-3xl pb-8 lg:flex-row lg:gap-0 lg:pb-16 w-full">
         {achievements.map((achievement) => (
           <Statistic

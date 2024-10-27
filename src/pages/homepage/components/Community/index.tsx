@@ -5,7 +5,6 @@ import React, { Fragment } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
-import FlushReveal from '@/components/animation/FlushReveal';
 import Section from '@/components/Section';
 import { OPTIMAL_SIZES } from '@/constants/image-sizes';
 import { getImageByQuality } from '@/utils/getImage';
