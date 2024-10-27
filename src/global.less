@@ -3,10 +3,10 @@
 @import 'tailwindcss/utilities';
 
 // GG Font API
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  font-family: Nunito, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: DM Sans, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 @layer base {
@@ -41,5 +41,41 @@
 @layer utilities {
   .font-stretch {
     font-stretch: expanded;
+  }
+}
+
+@layer components {
+  .custom-menu {
+    @apply font-sans text-body-3-medium;
+
+    .ant-menu-item {
+      @apply ~"py-1.5 px-0.5";
+      .ant-menu-title-content {
+        @apply ~"py-2 px-2 text-gray-500";
+      }
+
+      &:after {
+        inset-inline: 10px !important;
+        border-bottom-color: transparent !important;
+      }
+
+      &:hover {
+        .ant-menu-title-content {
+          @apply !bg-gray-50 !rounded-md text-gray-900;
+        }
+      }
+    }
+
+    .ant-menu-item-selected {
+      @apply !text-gray-950;
+      .ant-menu-title-content {
+        @apply py-2 px-2 text-gray-900;
+      }
+
+      &:after {
+        @apply block;
+        @apply !border-b-blue-700;
+      }
+    }
   }
 }

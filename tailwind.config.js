@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Nunito', 'ui-sans-serif'],
+        sans: ['DM Sans', 'ui-sans-serif'],
         serif: ['ui-serif'],
       },
       keyframes: {
@@ -56,9 +56,9 @@ export default {
         'body-2-medium': ['18px', { lineHeight: '22px', fontWeight: '500' }],
         'body-2-regular': ['18px', { lineHeight: '22px', fontWeight: '400' }],
 
-        'body-3-semibold': ['16px', { lineHeight: '20px', fontWeight: '700' }],
-        'body-3-medium': ['16px', { lineHeight: '20px', fontWeight: '500' }],
-        'body-3-regular': ['16px', { lineHeight: '20px', fontWeight: '400' }],
+        'body-3-semibold': ['0.875rem', { lineHeight: '1.25rem', fontWeight: '600' }],
+        'body-3-medium': ['0.875rem', { lineHeight: '1.25rem', fontWeight: '500' }],
+        'body-3-regular': ['0.875rem', { lineHeight: '1.25rem', fontWeight: '400' }],
 
         borderRadius: {
           default: '4px',

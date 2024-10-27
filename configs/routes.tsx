@@ -2,14 +2,15 @@ import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import { path } from '@/constants/path';
-import NavBar from '@/layouts/Navbar/index';
+
+import MainPage from '@/layouts/MainPage/index';
 
 const NotFound = lazy(() => import('@/pages/not-found'));
 
 export const router = createBrowserRouter([
   {
     path: path.HOMEPAGE,
-    element: <NavBar />,
+    element: <MainPage />,
     children: [
       // {
       //   path: path.HOMEPAGE,
