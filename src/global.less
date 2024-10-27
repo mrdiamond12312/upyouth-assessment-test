@@ -3,10 +3,9 @@
 @import 'tailwindcss/utilities';
 
 // GG Font API
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  font-family: DM Sans, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 @layer base {
@@ -75,6 +74,34 @@
       &:after {
         @apply block;
         @apply !border-b-blue-700;
+      }
+    }
+  }
+
+  .custom-button-primary {
+    @apply ~"bg-blue-700 px-[14px] py-[10px] h-auto";
+
+    &:hover {
+      @apply !bg-blue-800 !text-neutral-1;
+    }
+  }
+  
+  .custom-button-swipe {
+    @apply ~"px-[14px] py-[10px] h-auto overflow-hidden !bg-transparent";
+    &:before {
+      @apply w-full h-full inline-block absolute -left-full bg-blue-700 transition-all -z-0;
+      content: "";
+      transition-duration: 500ms;
+    }
+
+    span {
+      @apply z-0;
+    }
+
+    &:hover {
+      @apply !text-neutral-1 !border-neutral-5;
+      &:before {
+        @apply left-0;
       }
     }
   }

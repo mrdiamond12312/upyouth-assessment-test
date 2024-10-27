@@ -1,14 +1,16 @@
 export default {
   content: [
     './src/pages/**/*.tsx',
+    './src/pages/**/**/*.tsx',
     './src/components/**/*.tsx',
     './src/layouts/**/*.tsx',
     './index.html',
+    './src/loading.tsx'
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['DM Sans', 'ui-sans-serif'],
+        sans: ['ui-sans-serif','system-ui,sans-serif','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'],
         serif: ['ui-serif'],
       },
       keyframes: {
@@ -42,19 +44,19 @@ export default {
       },
 
       fontSize: {
-        'heading-1': ['40px', { lineHeight: '48px', fontWeight: '800' }],
-        'heading-2': ['36px', { lineHeight: '40px', fontWeight: '800' }],
-        'heading-3': ['32px', { lineHeight: '36px', fontWeight: '800' }],
-        'heading-4': ['28px', { lineHeight: '32px', fontWeight: '700' }],
-        'heading-5': ['24px', { lineHeight: '28px', fontWeight: '700' }],
+        'heading-1': ['6rem', { lineHeight: '1', fontWeight: '700' }],
+        'heading-2': ['5.25rem', { lineHeight: '1', fontWeight: '700' }],
+        'heading-3': ['4.5rem', { lineHeight: '1', fontWeight: '700' }],
+        'heading-4': ['3.75rem', { lineHeight: '1', fontWeight: '700' }],
+        'heading-5': ['2.25rem', { lineHeight: '1', fontWeight: '700' }],
 
-        'body-1-semibold': ['20px', { lineHeight: '24px', fontWeight: '700' }],
-        'body-1-medium': ['20px', { lineHeight: '24px', fontWeight: '500' }],
-        'body-1-regular': ['20px', { lineHeight: '24px', fontWeight: '400' }],
+        'body-1-semibold': ['1.125rem', { lineHeight: '1.75rem', fontWeight: '600' }],
+        'body-1-medium': ['1.125rem', { lineHeight: '1.75rem', fontWeight: '500' }],
+        'body-1-regular': ['1.125rem', { lineHeight: '1.75rem', fontWeight: '400' }],
 
-        'body-2-semibold': ['18px', { lineHeight: '22px', fontWeight: '700' }],
-        'body-2-medium': ['18px', { lineHeight: '22px', fontWeight: '500' }],
-        'body-2-regular': ['18px', { lineHeight: '22px', fontWeight: '400' }],
+        'body-2-semibold': ['1rem', { lineHeight: '1.5rem', fontWeight: '600' }],
+        'body-2-medium': ['1rem', { lineHeight: '1.5rem', fontWeight: '500' }],
+        'body-2-regular': ['1rem', { lineHeight: '1.5rem', fontWeight: '400' }],
 
         'body-3-semibold': ['0.875rem', { lineHeight: '1.25rem', fontWeight: '600' }],
         'body-3-medium': ['0.875rem', { lineHeight: '1.25rem', fontWeight: '500' }],

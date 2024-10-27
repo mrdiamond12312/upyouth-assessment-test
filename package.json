@@ -18,6 +18,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.1",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@phosphor-icons/react": "^2.1.7",
@@ -26,9 +27,11 @@
     "antd": "^5.21.5",
     "classnames": "^2.4.0",
     "dotenv": "^16.3.1",
+    "framer-motion": "^11.11.10",
     "husky": "^8.0.3",
     "less": "^4.2.0",
     "phosphor-icons": "^1.4.2",
+    "postcss-nesting": "^13.0.1",
     "react": "^18.2.0",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",

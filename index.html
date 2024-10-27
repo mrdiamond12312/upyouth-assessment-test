@@ -6,9 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assessment Project</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+      .badge {
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translateX(-50%) translateY(-50%);
+        flex-direction: column; 
+        width: fit-content; 
+      }
+      .logo {
+        display: flex; 
+        flex-direction: row; 
+        gap: 0.5rem; 
+        align-items: flex-end; 
+      }
+      .logo--icon {
+        width: 45px; 
+      }
+
+      .logo--text {
+        width: 150px;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="badge">
+        <div class = 'logo'>
+          <img src="/brand-icon.png" class="logo--icon"/>
+          <img src="/brand-name.png" class="logo--text"/>
+        </div>
+      </div>
+  </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
