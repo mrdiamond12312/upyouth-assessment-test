@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 
 import Achievements from '@/pages/homepage/components/Achievements';
 import Advisors from '@/pages/homepage/components/Advisors';
@@ -13,6 +14,9 @@ import UpYouthians from '@/pages/homepage/components/UpYouthians';
 const HomePage: React.FC = () => {
   return (
     <Fragment>
+      <Helmet>
+        <title>Homepage | UpYouth Assessment Test</title>
+      </Helmet>
       <LandingSection />
       <Achievements />
       <Community />

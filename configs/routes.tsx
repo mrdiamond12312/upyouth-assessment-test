@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { Helmet } from 'react-helmet';
 import { createBrowserRouter } from 'react-router-dom';
 
 import { path } from '@/constants/path';
@@ -15,7 +16,11 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       {
         path: path.ABOUT,
-        element: <></>,
+        element: (
+          <Helmet>
+            <title>About Us | UpYouth Assessment Test</title>
+          </Helmet>
+        ),
       },
     ],
   },
