@@ -13,3 +13,7 @@ export const getImageByQuality = ({ url, quality = 100, width = 1536 }: IImageOp
     width,
   });
 };
+
+export const getSrcSet = (sizes: number[], url: string) => {
+  return sizes.map((width) => `${getImageByQuality({ url, width })} ${width}w`).join(', ');
+};

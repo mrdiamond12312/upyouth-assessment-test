@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import Achievements from '@/pages/homepage/components/Achievements';
 import Advisors from '@/pages/homepage/components/Advisors';
 import Community from '@/pages/homepage/components/Community';
+import Inquiries from '@/pages/homepage/components/Inquiries';
 import LandingSection from '@/pages/homepage/components/LandingSection';
 import News from '@/pages/homepage/components/News';
 import Partners from '@/pages/homepage/components/Partners';
@@ -20,6 +21,7 @@ const HomePage: React.FC = () => {
       <Advisors />
       <UpYouthians />
       <News />
+      <Inquiries />
     </Fragment>
   );
 };

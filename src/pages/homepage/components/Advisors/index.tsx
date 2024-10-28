@@ -5,6 +5,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 import Section from '@/components/Section';
+import { OPTIMAL_SIZES } from '@/constants/image-sizes';
+import { getImageByQuality, getSrcSet } from '@/utils/getImage';
 
 interface IAdvisorInfo {
   name: string;
@@ -32,6 +34,9 @@ const AdvisorInfo: React.FC<IAdvisorInfo> = ({
       <LazyLoadImage
         src={image}
         alt={name}
+        srcSet={getSrcSet(OPTIMAL_SIZES, image)}
+        placeholderSrc={getImageByQuality({ url: image, quality: 10 })}
+        effect="blur"
         className="mb-2 h-[100px] w-[100px] rounded-full md:h-[200px] md:w-[200px]"
       />
       <div>

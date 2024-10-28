@@ -8,6 +8,7 @@ import { router } from '@/../configs/routes';
 import store from '@/storage/store';
 
 import '@/global.less';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const queryClient = new QueryClient();
 

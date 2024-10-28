@@ -3,6 +3,8 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Section from '@/components/Section';
+import { OPTIMAL_SIZES } from '@/constants/image-sizes';
+import { getImageByQuality, getSrcSet } from '@/utils/getImage';
 
 interface ILocationInfo {
   category: string;
@@ -15,7 +17,13 @@ const UpYouthiansLife: React.FC<ILocationInfo> = ({ category, images }) => {
       <span className="text-primary-700 w-max text-3xl font-bold">{category}</span>
       <div className="grid w-max grid-cols-2 place-items-center gap-6 md:grid-cols-3">
         {images.map((image) => (
-          <LazyLoadImage src={image} className="h-[48px]" />
+          <LazyLoadImage
+            src={image}
+            className="h-[48px]"
+            srcSet={getSrcSet(OPTIMAL_SIZES, image)}
+            placeholderSrc={getImageByQuality({ url: image, quality: 10 })}
+            effect="blur"
+          />
         ))}
       </div>
     </div>

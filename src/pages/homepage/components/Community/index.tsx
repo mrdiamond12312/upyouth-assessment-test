@@ -5,6 +5,8 @@ import React, { Fragment } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
+import { getSrcSet } from '../../../../utils/getImage';
+
 import Section from '@/components/Section';
 import { OPTIMAL_SIZES } from '@/constants/image-sizes';
 import { getImageByQuality } from '@/utils/getImage';
@@ -38,15 +40,14 @@ const CommunityInfoCard: React.FC<ICommunityInfo> = ({
       <Flex className="flex-1 justify-center items-center ">
         <Carousel rootClassName="w-[500px] max-w-[calc(100vw-32px)]" autoplay infinite draggable>
           {images.map((image) => {
-            const srcSet = OPTIMAL_SIZES.map(
-              (width) => `${getImageByQuality({ url: image, width })} ${width}w`,
-            ).join(', ');
+            const srcSet = getSrcSet(OPTIMAL_SIZES, image);
             return (
               <div className="px-2">
                 <LazyLoadImage
                   src={getImageByQuality({ url: image, quality: 30 })}
                   srcSet={srcSet}
                   placeholderSrc={getImageByQuality({ url: image, quality: 30 })}
+                  effect="blur"
                   alt={image}
                   className="rounded-xl object-cover cursor-grab"
                 />
