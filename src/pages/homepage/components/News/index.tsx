@@ -13,7 +13,7 @@ interface INewsInfo {
 
 const NewsInfo: React.FC<INewsInfo> = ({ url, image }) => {
   return (
-    <Link to={url} target="_blank" rel="noopener noreferrer">
+    <Link to={url} target="_blank" rel="noopener noreferrer" aria-label={image}>
       <LazyLoadImage
         src={image}
         effect="blur"

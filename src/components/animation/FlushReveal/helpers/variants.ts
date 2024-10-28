@@ -22,6 +22,7 @@ export const FLUSH_CONTAINER_VARIANT: Variants = {
 export const FLUSH_POINTER_VARIANT: Variants = {
   visible: (isInView: boolean) => ({
     left: isInView ? '100%' : 0,
+    display: 'none',
   }),
   hidden: () => ({
     left: 0,
