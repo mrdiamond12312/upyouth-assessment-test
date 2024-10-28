@@ -1,6 +1,7 @@
 # UpYouth Assessment Test
 This repo replicate the homepage of [UpYouth](https://www.upyouth.org/)
-Live Demo: [https://upyouth-assessment-test.netlify.app/](https://www.upyouth.org/](https://upyouth-assessment-test.netlify.app/)
+
+Live Demo: [https://upyouth-assessment-test.netlify.app/](https://upyouth-assessment-test.netlify.app/)
 ## How to run:
 
 - Install Dependencies
