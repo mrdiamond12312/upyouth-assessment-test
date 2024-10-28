@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
     <footer className="w-full border-t border-gray-200 bg-white py-6 text-gray-500 shadow-md">
       <div className="flex w-full flex-col px-8">
         <Link className="flex items-end gap-2" to={path.HOMEPAGE}>
-          <img src="/brand-icon.png" className="w-5 md:w-[30px]" />
-          <img src="/brand-name.png" className="w-[69px] md:w-[100px]" />
+          <img src="/brand-icon.png" className="w-5 md:w-[30px]" alt="brand-icon" />
+          <img src="/brand-name.png" className="w-[69px] md:w-[100px]" alt="brand-icon" />
         </Link>
         <Flex className="pt-8 flex flex-col items-start justify-between md:flex-row md:items-center">
           <span>© Copyright 2024, All Rights Reserved by UpYouth Social Company</span>
@@ -49,6 +49,7 @@ const Footer: React.FC = () => {
                 <Button
                   type="primary"
                   className="bg-white text-gray-900 shadow-lg rounded-full !p-2.5 w-auto h-auto custom-button-swipe"
+                  aria-label={link.aria}
                 >
                   <div className="z-10">{link.icon}</div>
                 </Button>

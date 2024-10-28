@@ -51,10 +51,12 @@ const LandingSection: React.FC = () => {
       <img
         src="/arcs/arc1.png"
         ref={scrollRef}
+        alt="arc"
         className="absolute -bottom-[105px] right-[70px] z-10 w-[190px] lg:-bottom-[220px] lg:w-[384px]"
       />
       <img
         src="/arcs/arc2.png"
+        alt="arc"
         className="absolute -bottom-[100px] right-[145px] w-[190px] -rotate-90 lg:-bottom-[220px] lg:right-[200px] lg:w-[384px]"
       />
     </Flex>

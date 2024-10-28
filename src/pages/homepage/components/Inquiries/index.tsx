@@ -16,6 +16,7 @@ const Inquiries: React.FC = () => {
       </Link>
       <img
         src="/arcs/arc1.png"
+        alt="arc"
         className="absolute -bottom-[200px] right-0 z-10 w-[384px] translate-x-1/2 transform"
       ></img>
     </div>

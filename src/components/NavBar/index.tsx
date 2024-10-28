@@ -21,8 +21,8 @@ const NavBar: React.FC = () => {
   return (
     <div className="bg-neutral-1/50 backdrop-blur-md top-0 sticky flex flex-row justify-between items-center px-4 py-6 md:px-8 shadow-md z-30">
       <div className="flex flex-row gap-2 items-end">
-        <img src="/brand-icon.png" className="w-5 md:w-[30px]" />
-        <img src="/brand-name.png" className="w-[69px] md:w-[100px]" />
+        <img src="/brand-icon.png" className="w-5 md:w-[30px]" alt="brand-icon" />
+        <img src="/brand-name.png" className="w-[69px] md:w-[100px]" alt="brand-icon" />
       </div>
 
       <nav className="flex flex-row items-center gap-4">

@@ -70,7 +70,11 @@ const Partners: React.FC = () => {
             {sponsorRow.map((sponsor) => (
               <div className="items-center justify-center text-center" key={sponsor}>
                 <div className="!flex !h-[60px] rounded-lg border border-gray-300 md:!h-[90px] lg:!h-[140px] !w-fit m-auto">
-                  <img src={sponsor} className="mx-6 w-[80px] md:w-[140px] lg:w-[200px]" />
+                  <img
+                    src={sponsor}
+                    className="mx-6 w-[80px] md:w-[140px] lg:w-[200px]"
+                    alt={sponsor}
+                  />
                 </div>
               </div>
             ))}
