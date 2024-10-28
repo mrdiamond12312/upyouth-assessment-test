@@ -55,7 +55,7 @@ const Partners: React.FC = () => {
                 },
               },
               {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                   slidesToShow: 2,
                   centerPadding: '70px',
