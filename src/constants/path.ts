@@ -1,5 +1,5 @@
 export enum path {
   HOMEPAGE = '/',
-  ABOUT = '/out-team',
+  ABOUT = '/our-team',
   PAGE_NOT_FOUND = '/page-not-found',
 }

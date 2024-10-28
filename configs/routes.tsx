@@ -2,7 +2,6 @@ import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import { path } from '@/constants/path';
-
 import MainPage from '@/layouts/MainPage/index';
 
 const HomePage = lazy(() => import('@/pages/homepage'));
@@ -13,7 +12,11 @@ export const router = createBrowserRouter([
     path: path.HOMEPAGE,
     element: <MainPage />,
     children: [
-      {index: true, element: <HomePage />},
+      { index: true, element: <HomePage /> },
+      {
+        path: path.ABOUT,
+        element: <></>,
+      },
     ],
   },
 

@@ -1,19 +1,23 @@
 import { Button, Menu, MenuProps } from 'antd/lib';
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+import { path } from '@/constants/path';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 const NavBar: React.FC = () => {
   const items: MenuItem[] = [
     {
-      label: 'Homepage',
-      key: 'homepage',
+      label: <Link to={path.HOMEPAGE}>Homepage</Link>,
+      key: '/',
     },
     {
-      label: 'Our Team',
-      key: 'our-team',
+      label: <Link to={path.ABOUT}>Our team</Link>,
+      key: '/our-team',
     },
   ];
+  const { pathname } = useLocation();
   return (
     <div className="bg-neutral-1/50 backdrop-blur-md top-0 sticky flex flex-row justify-between items-center px-4 py-6 md:px-8 shadow-md z-30">
       <div className="flex flex-row gap-2 items-end">
@@ -27,14 +31,17 @@ const NavBar: React.FC = () => {
           mode="horizontal"
           disabledOverflow
           className="border-0 custom-menu bg-transparent"
-          selectedKeys={['homepage']}
+          selectedKeys={[pathname]}
         />
-        <Button
-          type="primary"
-          className="font-sans custom-button-primary text-body-2-semibold rounded-full bg-gradient-to-r from-blue-600 to-blue-800 hover:scale-125 hover:!bg-gradient-to-r hover:from-blue-700 hover:to-blue-900 py-2 px-4"
-        >
-          Join us now!
-        </Button>
+        <Link to={'https://tally.so/r/mZzXpo'}>
+          <Button
+            type="primary"
+            className="font-sans custom-button-primary text-body-2-semibold rounded-full bg-gradient-to-r from-blue-600 to-blue-800 hover:scale-125 hover:!bg-gradient-to-r hover:from-blue-700 hover:to-blue-900 py-2 px-4"
+            aria-label="Join UpYouth"
+          >
+            Join us now!
+          </Button>
+        </Link>
       </nav>
     </div>
   );

@@ -5,10 +5,9 @@ import React, { Fragment } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
-import { getSrcSet } from '../../../../utils/getImage';
-
 import Section from '@/components/Section';
 import { OPTIMAL_SIZES } from '@/constants/image-sizes';
+import { getSrcSet } from '@/utils/getImage';
 import { getImageByQuality } from '@/utils/getImage';
 
 interface ICommunityInfo {
@@ -42,7 +41,7 @@ const CommunityInfoCard: React.FC<ICommunityInfo> = ({
           {images.map((image) => {
             const srcSet = getSrcSet(OPTIMAL_SIZES, image);
             return (
-              <div className="px-2">
+              <div className="px-2" key={image}>
                 <LazyLoadImage
                   src={getImageByQuality({ url: image, quality: 30 })}
                   srcSet={srcSet}
@@ -65,6 +64,7 @@ const CommunityInfoCard: React.FC<ICommunityInfo> = ({
           <Button
             icon={<ArrowRight />}
             iconPosition="end"
+            aria-label={btnText}
             className="custom-button-swipe text-body-3-medium rounded-full"
           >
             {btnText}

@@ -38,7 +38,7 @@ const Pros: React.FC = () => {
         className="max-w-7xl mx-auto gap-y-4 lg:gap-y-8 px-4"
       >
         {pros.map((pro) => (
-          <Col span={24} md={12}>
+          <Col span={24} md={12} key={pro.title}>
             <div className="p-4 bg-white h-full rounded-lg">
               <h1 className="font-text-primary-700 text-xl font-bold md:text-3xl mb-4 text-blue-700">
                 {pro.title}

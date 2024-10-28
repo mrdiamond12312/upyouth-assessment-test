@@ -23,6 +23,7 @@ const UpYouthiansLife: React.FC<ILocationInfo> = ({ category, images }) => {
             srcSet={getSrcSet(OPTIMAL_SIZES, image)}
             placeholderSrc={getImageByQuality({ url: image, quality: 10 })}
             effect="blur"
+            key={image}
           />
         ))}
       </div>
@@ -86,7 +87,7 @@ const UpYouthians: React.FC = () => {
       />
       <Flex className="mx-auto mt-4 flex w-fit flex-col gap-4 lg:flex-row">
         {locations.map((location) => (
-          <UpYouthiansLife {...location} />
+          <UpYouthiansLife {...location} key={location.category} />
         ))}
       </Flex>
     </section>

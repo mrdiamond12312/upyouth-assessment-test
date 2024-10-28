@@ -74,6 +74,7 @@ const Achievements = () => {
           <Statistic
             {...achievement}
             isCurrentStatistic={achievement.category === achievements[currentStatistic].category}
+            key={achievement.category}
           />
         ))}
       </Flex>

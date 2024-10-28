@@ -39,7 +39,7 @@ const Partners: React.FC = () => {
         description="Our elite partners in startup ecosystems help you build real ventures and grow them far beyond."
       />
       <Flex className="flex-col gap-8 mb-8">
-        {sponsors.map((sponsorRow) => (
+        {sponsors.map((sponsorRow, index) => (
           <Carousel
             rootClassName="max-w-7xl w-full mx-auto"
             infinite
@@ -65,9 +65,10 @@ const Partners: React.FC = () => {
             centerMode
             centerPadding="140px"
             dots={false}
+            key={['carousel-sponsor', index].join('-')}
           >
             {sponsorRow.map((sponsor) => (
-              <div className="items-center justify-center text-center">
+              <div className="items-center justify-center text-center" key={sponsor}>
                 <div className="!flex !h-[60px] rounded-lg border border-gray-300 md:!h-[90px] lg:!h-[140px] !w-fit m-auto">
                   <img src={sponsor} className="mx-6 w-[80px] md:w-[140px] lg:w-[200px]" />
                 </div>
