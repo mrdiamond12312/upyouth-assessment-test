@@ -3,7 +3,7 @@ import React from 'react';
 
 import Section from '@/components/Section';
 
-const Pros = () => {
+const Pros: React.FC = () => {
   const pros = [
     {
       title: 'Elite network',

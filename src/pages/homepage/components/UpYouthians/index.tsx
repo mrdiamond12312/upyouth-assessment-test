@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '@/components/Section';
 
-const UpYouthians = () => {
+const UpYouthians: React.FC = () => {
   return (
     <Section
       header="UpYouthians come from ALL"

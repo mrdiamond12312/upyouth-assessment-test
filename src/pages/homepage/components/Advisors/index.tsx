@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '@/components/Section';
 
-const Advisors = () => {
+const Advisors: React.FC = () => {
   return (
     <section className="bg-blue-700 relative mx-4 overflow-hidden rounded-3xl pb-16 pt-8">
       <Section
