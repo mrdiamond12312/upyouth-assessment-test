@@ -1,4 +1,4 @@
-import { Col, Flex, Row } from 'antd/lib';
+import { Flex } from 'antd/lib';
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 

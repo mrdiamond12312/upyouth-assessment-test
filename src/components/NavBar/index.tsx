@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
           items={items}
           mode="horizontal"
           disabledOverflow
-          className="border-0 custom-menu"
+          className="border-0 custom-menu bg-transparent"
           selectedKeys={['homepage']}
         />
         <Button
