@@ -1,6 +1,6 @@
 # UpYouth Assessment Test
 This repo replicate the homepage of [UpYouth](https://www.upyouth.org/)
-
+Live Demo: [https://upyouth-assessment-test.netlify.app/]([https://www.upyouth.org/](https://upyouth-assessment-test.netlify.app/))
 ## How to run:
 
 - Install Dependencies
@@ -10,12 +10,6 @@ cd <project-folder>
 npm install
 ```
 
-- Enable Husky for commitlint
-
-```
-npm run prepare
-```
-
 - Run the Project
 
 ```
@@ -23,6 +17,29 @@ npm run dev
 ```
 
 - Navigate to `http://localhost:3000`
+
+## Build and Run:
+This is the environment for lighthousing
+
+- Build the Project
+
+```
+npm run build
+```
+
+- Build the Project
+
+```
+npm run preview
+```
+- Navigate to `http://localhost:4173`
+
+## Lighthouse optimization applied
+- aria for buttons and links.
+- Some layout shift fixed.
+- meta tag for SEO.
+
+![image](https://github.com/user-attachments/assets/f12c0f6e-bc94-4400-a214-fc3a04f5aa43)
 
 ## Folder Structure
 
